@@ -1,4 +1,4 @@
-package com.spring.NoticeBoard_api;
+package com.spring.NoticeBoard_api.config;
 
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.Components;
