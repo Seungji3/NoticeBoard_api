@@ -13,7 +13,7 @@ public interface UserMapper {
 
     UserVo addUser(String name);
 
-    UserVo updateUser(@Param("id") int id,@Param("name") String name);
+    UserVo updateUser(@Param("id") int id, @Param("name") String name);
 
-    UserVo deleteUser(int id);
+    UserVo deleteUserById(int id);
 }

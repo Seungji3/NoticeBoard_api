@@ -3,14 +3,32 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.spring.NoticeBoard_api.mapper.NoticeMapper">
     <select id="getAllNotice" resultType="com.spring.NoticeBoard_api.vo.NoticeVo">
-
+        SELECT *
+        FROM notice_board
     </select>
 
     <select id="getAllNoticeById" resultType="com.spring.NoticeBoard_api.vo.NoticeVo">
-
+        SELECT *
+        FROM notice_board
+        WHERE id = #{id}
     </select>
 
     <insert id="addNotice">
-
+        INSERT INTO notice_board(user_id, title, subtitle, createdate)
+        VALUES (#{userId}, #{title}, #{subTitle}, #{createDate})
     </insert>
+
+    <update id="updateNoticeById">
+        UPDATE notice_board
+        SET title = #{title},
+            subTitle = #{subTitle},
+            updateDate = #{updateDate}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteNoticeById">
+        DELETE
+        FROM notice_board
+        WHERE id = #{id}
+    </delete>
 </mapper>
